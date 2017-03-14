@@ -6,7 +6,6 @@ var nunjucks = require('nunjucks');
 var loginRouter = require('./routes/login');
 var logoutRouter = require('./routes/logout');
 var registerRouter = require('./routes/register');
-var ccc = require('./routes/ccc');
 var chatServer = require('./chatserver');
 
 var app = express();
@@ -56,7 +55,6 @@ app.set('view engine', 'nunjucks');
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
 app.use('/register', registerRouter);
-app.use('/ccc', ccc);
 
 app.get('/', (req, res) => {
     res.render('index');
